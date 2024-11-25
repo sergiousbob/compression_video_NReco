@@ -55,6 +55,7 @@ namespace compression_video
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comprBar = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -329,11 +330,19 @@ namespace compression_video
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Output Video";
             // 
+            // comprBar
+            // 
+            this.comprBar.Location = new System.Drawing.Point(1136, 567);
+            this.comprBar.Name = "comprBar";
+            this.comprBar.Size = new System.Drawing.Size(241, 28);
+            this.comprBar.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1393, 590);
+            this.ClientSize = new System.Drawing.Size(1393, 608);
+            this.Controls.Add(this.comprBar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -349,6 +358,7 @@ namespace compression_video
             this.Controls.Add(this.groupBox2);
             this.Name = "Form1";
             this.Text = "VideoConverter by Sergiousbob";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -386,6 +396,7 @@ namespace compression_video
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ProgressBar comprBar;
     }
 }
 
